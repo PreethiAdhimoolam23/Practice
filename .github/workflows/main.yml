@@ -2,9 +2,13 @@ name: Run Java Tests
 
 on:
   push:
-    branches : [master]
+    branches: [main]
+    paths:
+      - 'src/test_case_package/post_tc.java'
   pull_request:
-    branches : [master]
+    branches: [main]
+    paths:
+      - 'src/test_case_package/post_tc.java'
   workflow_dispatch:
 
 jobs:
