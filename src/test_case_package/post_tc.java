@@ -34,7 +34,7 @@ public static void executer1() {
 		String req_name=jsp_request.getString("name");
 		System.out.println(req_name);
 		String req_job=jsp_request.getString("job");
-		System.out.println(req_job);
+		//System.out.println(req_job);
 		
 		//Step:5 Parsing and extracting the response body params
 		JsonPath jsp_response=new JsonPath(responseBody);
