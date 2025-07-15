@@ -2,13 +2,9 @@ name: Run Java Tests
 
 on:
   push:
-    paths:
-      - 'src/test_case_package/test.java'
-      - '.github/workflows/run-java-tests.yml'
+    branches : [master]
   pull_request:
-    paths:
-      - 'src/test_case_package/test.java'
-      - '.github/workflows/run-java-tests.yml'
+    branches : [master]
   workflow_dispatch:
 
 jobs:
