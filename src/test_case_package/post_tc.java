@@ -54,6 +54,7 @@ public static void executer1() {
 		
 		//Formatting the date
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(sdf);
 		
 		//Converting the date to string
 		String cur_date=sdf.format(current_date);
