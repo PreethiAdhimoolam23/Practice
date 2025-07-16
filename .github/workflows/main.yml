@@ -34,4 +34,4 @@ jobs:
 
       - name: Run TestNG test
         run: |
-          java -cp "src:lib/testng.jar:lib/jcommander.jar:lib/slf4j-api.jar:lib/slf4j-simple.jar" org.testng.TestNG -testclass test_case_package.sdf_not_null_test
+          mvn -Dtest=test_case_package.sdf_not_null_test test
