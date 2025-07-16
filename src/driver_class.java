@@ -1,4 +1,4 @@
-import request_repository_package.post_tc;
+import test_case_package.post_tc;
 
 public class driver_class {
 
