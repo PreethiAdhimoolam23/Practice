@@ -27,7 +27,7 @@ public static void executer1() {
 		//Extracting the response body
 		String responseBody=given().header("Content-Type", "application/json").body(post_request_repository.post_req_tc1()).
 							when().post("/api/users").then().extract().response().asString();
-		System.out.println(responseBody);
+		//System.out.println(responseBody);
 		
 		//Step:4 Parsing and extracting the request body params
 		JsonPath jsp_request=new JsonPath(post_request_repository.post_req_tc1());
