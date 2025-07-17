@@ -34,4 +34,4 @@ jobs:
 
       - name: Run TestNG test
         run: |
-          mvn -Dtest=test_case_package.sdf_not_null_test test
+           mvn test -Dtest=sdf_not_null_test
