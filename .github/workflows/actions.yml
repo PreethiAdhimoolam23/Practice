@@ -1,0 +1,43 @@
+name: Run Java tests
+
+on:
+  push:
+    branches: [Actions]
+    paths:
+      - 'src/test_case_package/post_tc.java'
+  pull_request:
+    branches: [Actions]
+    paths:
+      - 'src/test_case_package/post_tc.java'
+  workflow_dispatch:
+  
+jobs:
+  test-and-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'  # Or match your local Java version
+
+    - name: Run specific test with JaCoCo
+      run: |
+        mvn clean test -Dtest=sdf_not_null_test
+
+    - name: Generate coverage report
+      run: mvn jacoco:report
+
+    - name: Display JaCoCo coverage file location
+      run: ls -R target/site/jacoco
+
+    # Optional: Upload coverage report as artifact
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: jacoco-report
+        path: target/site/jacoco
