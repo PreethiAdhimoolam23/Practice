@@ -47,7 +47,7 @@ public static void executer1() {
 		String res_createdAt=jsp_response.getString("createdAt");
 		System.out.println(res_createdAt);
 		String res_createdAt_substring=res_createdAt.substring(0, 10);
-		System.out.println(res_createdAt_substring);
+		//System.out.println(res_createdAt_substring);
 		
 		//Extracting the current date
 		Date current_date=new Date();
